@@ -8,38 +8,33 @@ int doomsday (int y);
 int main()
 {
     int y; // the year
-    int t = 1; // checking if the input is correct
     string str;
 
-    while (t)
-    {
-        cout << "Enter the year (1900 - 2099): ";
-        cin >> y;
+    cout << "Enter the year (from 0 AD): ";
+    cin >> y;
 
+    while(y < 0)
+    {
+        cout << "Please enter any year from 0 AD\n\n";
+        cout << "Enter the year (from 0 AD): ";
+        cin >> y;
+    }
+
+    cout << "Enter the name of the month: ";
+    cin >> str;
+
+    for (int i = 0; i < str.size(); i++)
+    {
+        if (str[i] < 97)
+        str[i] += 32; // converting to lowercase
+    }
+
+    while (str != "january" && str != "february" && str != "march" && str != "april" && str != "may" && str != "june" && str != "july" &&
+            str != "august" && str != "september" && str != "october" && str != "november" && str != "december")
+    {
+        cout << "\nThis isn't a valid month name\n\n";
         cout << "Enter the name of the month: ";
         cin >> str;
-
-        for (int i = 0; i < str.size(); i++)
-        {
-            if (str[i] < 97)
-                str[i] += 32; // converting to lowercase
-        }
-
-        if (str == "january" || str == "february" || str == "march" || str == "april" || str == "may" || str == "june" || str == "july" || str == "august" || str == "september" || str == "october" || str == "november" || str == "december")
-            t = 0;
-        else
-        {
-            cout << "\nPlease adhere to the conditions\n\n";
-            t = 1;
-        }
-
-        if (y >= 1900 && y <= 2099)
-            t = 0;
-        else
-        {
-            cout << "\nPlease adhere to the conditions\n\n";
-            t = 1;
-        }
     }
 
     // the number of days in the given month
@@ -188,21 +183,38 @@ int main()
     return 0;
 }
 
-int doomsday (int y) // John Conway's algorithm
+int doomsday(int y) // John Conway's algorithm
 {
-    int sum = 0;
+    /* Century codes:
+       1900     2000    2100    2200
+        3        2       0       5
+       They repeat */
 
-    if (y >= 2000)
-    {
-        int y1 = y%2000; // years after the turn of the millenium
-        sum = 2 + y1/12 + y1%12 + (y1%12)/4;
+    int millennium = y/100;
+    int codeCategory = (millennium - 19)%4; // arbitrary reference year
+
+    int centuryCode;
+    switch (codeCategory){
+    case 0:
+        centuryCode = 3;
+        break;
+    case 1:
+    case -3:
+        centuryCode = 2;
+        break;
+    case 2:
+    case -2:
+        centuryCode = 0;
+        break;
+    case 3:
+    case -1:
+        centuryCode = 5;
+        break;
     }
 
-    else if (y < 2000 && y >= 1900)
-    {
-        int y1 = y%1900; // years after the turn of the millenium
-        sum = 3 + y1/12 + y1%12 + (y1%12)/4;
-    }
+    int sum;
+    int yearsAfterMillennium = y%100; // years after the turn of the millennium
+    sum = centuryCode + yearsAfterMillennium/12 + yearsAfterMillennium%12 + (yearsAfterMillennium%12)/4;
 
     /* doomsday number of that century + times twelve goes into it +
        remainder + times four goes into the remainder */
