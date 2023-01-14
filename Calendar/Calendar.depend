@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1673150034 source:d:\jcs c++ projects\calendar\calendar.cpp
+	<iostream>
+	<string>
+	<windows.h>
+
+1652970114 source:c:\users\chand\onedrive\desktop\jcs c++ projects\calendar\calendar.cpp
+	<iostream>
+	<string>
+	<windows.h>
+
