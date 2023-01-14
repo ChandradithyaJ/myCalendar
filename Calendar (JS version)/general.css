@@ -1,0 +1,12 @@
+body{
+    font-family: Almarai, Helvetica;
+    background-color: #12121f;
+    color: #eee;
+    font-size: large;
+}
+
+.screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

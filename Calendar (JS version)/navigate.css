@@ -1,0 +1,59 @@
+.navigate{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0;
+    flex: 1 1 1;
+    background-color: rgb(191, 167, 85);
+}
+
+.month-year{
+    background-color: inherit;
+}
+
+@media(max-width: 1000px)
+{
+    .month{
+        font-size: 15px;
+    }
+    .year{
+        font-size: 15px;
+    }
+    .arrow-btn{
+        font-size: 15px;
+    }
+}
+
+.month{
+    cursor: pointer;
+    border: none;
+    font-size: larger;
+    font-size: 30px;
+    color:rgba(49, 86, 197, 0.853);
+    background-color: transparent;
+}
+
+.year{
+    cursor: pointer;
+    border: none;
+    font-size: larger;
+    font-size: 30px;
+    color: rgba(49, 86, 197, 0.853);
+    background-color: transparent;
+}
+
+.arrow{
+    background-color: inherit;
+}
+
+.arrow-btn{
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-size: 25px;
+    color: rgba(49, 86, 197, 0.853);
+    background-color: transparent;
+}
+
