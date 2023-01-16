@@ -10,3 +10,30 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.month-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.year-text{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    border-radius: 3px;
+    border-color: lightcyan;
+}
+
+.input:focus::placeholder{
+    color: transparent;
+}
+
+.input::placeholder{
+    color: darkgray;
+    transition: color 0.3s ease;
+}
+

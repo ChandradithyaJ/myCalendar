@@ -238,3 +238,23 @@ function next() {
     document.getElementById('current-month').value = months[monthIndex];
     render();
 }
+
+function changeMonth(){
+    let month = document.getElementsByName('month-names');
+    for (i = 0; i < month.length; i++) {
+        if (month[i].checked)
+            document.getElementById("current-month").value
+                = month[i].value;
+    }
+    render();
+}
+
+function changeYear(){
+    let year = document.getElementById('year-input').value;
+    if(year < 0){
+        alert('Please enter a year after 0 AD');
+        return;
+    }
+    document.getElementById('current-year').value = year;
+    render();
+}

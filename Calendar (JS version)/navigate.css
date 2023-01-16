@@ -5,7 +5,6 @@
     justify-content: space-around;
     align-items: center;
     font-size: 0;
-    flex: 1 1 1;
     background-color: rgb(191, 167, 85);
 }
 
@@ -13,7 +12,7 @@
     background-color: inherit;
 }
 
-@media(max-width: 1000px)
+@media (max-width: 200px)
 {
     .month{
         font-size: 15px;

@@ -18,6 +18,23 @@
   </head>
 
   <body>
+    <div class="month-buttons">
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="January">January
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="February">February
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="March">March
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="April">April
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="May">May
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="June">June
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="July">July
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="August">August
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="September">September
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="October">October
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="November">Novemebr
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="December">December
+    </div>
+    <div class="year-text">
+      <input type="number" id="year-input" placeholder="Year: " class="input" oninput="changeYear()">
+    </div>
     <div class="screen">
       <div class="calendar-box">
         <div class="navigate">

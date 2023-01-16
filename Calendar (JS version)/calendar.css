@@ -25,12 +25,12 @@
     text-align: center;
 }
 
-@media(max-width:1000px){
+@media(max-width: 1000px ){
     .day{
         font-size: 10px;
     }
     .date{
-        font-size: 10px;
+        font-size: 5px;
     }
     .calendar-box{
         justify-content: center;
