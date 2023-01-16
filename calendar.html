@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infinity Calendar</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" 
+          rel="stylesheet">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="navigate.css">
+    <link rel="stylesheet" href="calendar.css">
+  </head>
+
+  <body>
+    <div class="month-buttons">
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="January">January
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="February">February
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="March">March
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="April">April
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="May">May
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="June">June
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="July">July
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="August">August
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="September">September
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="October">October
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="November">Novemebr
+      <input type="radio" name="month-names" class="month-name" onclick="changeMonth()" value="December">December
+    </div>
+    <div class="year-text">
+      <input type="number" id="year-input" placeholder="Year: " class="input" oninput="changeYear()">
+    </div>
+    <div class="screen">
+      <div class="calendar-box">
+        <div class="navigate">
+          <div class="arrow"> 
+            <input type="button" value="<" class="arrow-btn"
+            onclick="prev()">
+          </div>  
+          <div class="month-year">
+            <input type="button" id='current-month' class="month">
+            <input type="button" id="current-year" class="year">
+          </div>
+          <div class="arrow">
+            <input type="button" value=">" class="arrow-btn"
+            onclick="next()">
+          </div>
+        </div>
+
+        <div class="week">
+          <div class="day">Sun</div>
+          <div class="day">Mon</div>
+          <div class="day">Tue</div>
+          <div class="day">Wed</div>
+          <div class="day">Thu</div>
+          <div class="day">Fri</div>
+          <div class="day">Sat</div>
+        </div>
+
+        <div class="date"></div>
+      </div>
+    </div>
+  
+  <script src="script.js"></script>
+  </body>
+</html>
