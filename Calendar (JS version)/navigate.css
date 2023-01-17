@@ -26,7 +26,6 @@
 }
 
 .month{
-    cursor: pointer;
     border: none;
     font-size: larger;
     font-size: 30px;
@@ -35,7 +34,6 @@
 }
 
 .year{
-    cursor: pointer;
     border: none;
     font-size: larger;
     font-size: 30px;
