@@ -9,6 +9,17 @@
     box-shadow: 0px 0.5px 3px rgba(0, 0, 0, 0.5);
 }
 
+.calendar-box-light{
+    border: 100px;
+    border-color: blue;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 60px;
+    display: grid;
+    background-color: #bbbbe2;
+    box-shadow: 0px 0.5px 3px rgba(0, 0, 0, 0.5);
+}
+
 .week{
     display: grid;
     justify-content: center;
@@ -19,6 +30,14 @@
 
 .day{
     color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.day-light{
+    color: rgb(12, 12, 12);
     font-size: 18px;
     display: flex;
     justify-content: center;

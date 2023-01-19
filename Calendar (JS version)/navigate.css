@@ -8,6 +8,16 @@
     background-color: rgb(191, 167, 85);
 }
 
+.navigate-light{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0;
+    background-color: aliceblue;
+}
+
 .month-year{
     background-color: inherit;
 }

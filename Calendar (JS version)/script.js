@@ -7,6 +7,7 @@ const lastDayOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getD
 
 document.getElementById('current-month').value = months[date.getMonth()];
 document.getElementById('current-year').value = date.getFullYear();
+document.body.className = "dark-mode";
 render();
 
 /**  John H Conway's algorithm **/
@@ -191,6 +192,13 @@ function prev(){
         monthIndex = 10;
     }
     document.getElementById('current-month').value = months[monthIndex];
+
+    let month = document.getElementsByName('month-names');
+    for (i = 0; i < month.length; i++) {
+        month[i].checked = false;
+    }
+    month[monthIndex].checked = true;
+
     render();    
 }
 
@@ -236,6 +244,13 @@ function next() {
         document.getElementById('current-year').value = currentYear + 1;
     }
     document.getElementById('current-month').value = months[monthIndex];
+
+    let month = document.getElementsByName('month-names');
+    for (i = 0; i < month.length; i++) {
+        month[i].checked = false;
+    }
+    month[monthIndex].checked = true;
+
     render();
 }
 
@@ -256,5 +271,26 @@ function changeYear(){
         return;
     }
     document.getElementById('current-year').value = year;
+    render();
+}
+
+function changeMode(){
+    let element = document.body;
+    let link = document.getElementById('link-to-git');
+    let nav = document.getElementById('nav');
+    let cb = document.getElementById('cb');
+    if(element.className === "dark-mode"){
+        element.className = "light-mode";
+        link.className = "my-git-light";
+        nav.className = "navigate-light";
+        cb.className = 'calendar-box-light';
+    }
+    else if(element.className === "light-mode"){
+        element.className = "dark-mode";
+        link.className = "my-git";
+        nav.className = "navigate";
+        cb.className = 'calendar-box';
+    }
+    
     render();
 }
