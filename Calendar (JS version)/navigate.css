@@ -22,22 +22,24 @@
     background-color: inherit;
 }
 
-@media (max-width: 200px)
+@media (max-width: 1300px)
 {
     .month{
         font-size: 15px;
+        overflow: hidden;
     }
     .year{
         font-size: 15px;
+        overflow: hidden;
     }
     .arrow-btn{
         font-size: 15px;
+        overflow: hidden;
     }
 }
 
 .month{
     border: none;
-    font-size: larger;
     font-size: 30px;
     color:rgba(49, 86, 197, 0.853);
     background-color: transparent;

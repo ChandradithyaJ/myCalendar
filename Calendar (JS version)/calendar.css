@@ -36,29 +36,23 @@
     text-align: center;
 }
 
-.day-light{
-    color: rgb(12, 12, 12);
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-@media(max-width: 1000px ){
+@media(max-width: 1300px){
     .day{
         font-size: 10px;
+        overflow: hidden;
     }
-    .date{
-        font-size: 5px;
+    .date div{
+        font-size: 10px;
+        overflow: hidden;
     }
     .calendar-box{
         justify-content: center;
+        overflow: hidden;
     }
 }
 
 .date{
     color: white;
-    font-size: 18px;
     display: flex;
     flex-wrap: wrap;
     padding: 0.2px;
